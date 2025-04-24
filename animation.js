@@ -42,13 +42,13 @@ function rotation(el) {
     }, 6000);
 }
 
-function fade() {
-    curtain.style.opacity = "1";
+function fade(el) {
+    el.style.opacity = "1";
     fade = setInterval(() => {
-        if (curtain.style.opacity > 0) {
-            curtain.style.opacity -= 0.02;
+        if (el.style.opacity > 0) {
+            el.style.opacity -= 0.02;
         }else {
-            curtain.style.display = "none";
+            el.style.display = "none";
             document.body.style.overflow = "auto";
             clearInterval(fade);
         }
